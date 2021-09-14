@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DapperWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:DapperWebAPI.Controllers.ProductsController.Get(System.Int64)">
+            <summary>
+            Get Product
+            </summary>
+            <param name="id"></param>
+            <returns>return product</returns>
+        </member>
+    </members>
+</doc>
