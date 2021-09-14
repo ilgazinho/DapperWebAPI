@@ -52,11 +52,9 @@ namespace DapperWebAPI
             {
                 x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
-                    ValidateIssuerSigningKey = true,
-                    ValidateIssuer=true,
-                    ValidateAudience=true,
-                    ValidIssuer = "Kendo",
-                    ValidAudience = "Kendo",
+                    ValidateIssuerSigningKey = false,
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
 
                 };
