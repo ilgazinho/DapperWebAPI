@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using DapperWebAPI.Models;
 using DapperWebAPI.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DapperWebAPI.Controllers
 {
+    [Authorize]
     [Microsoft.AspNetCore.Mvc.Route("api/v1/[controller]")]
     public class StockController : Controller
     {

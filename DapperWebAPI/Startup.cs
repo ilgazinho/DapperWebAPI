@@ -55,8 +55,8 @@ namespace DapperWebAPI
                     ValidateIssuerSigningKey = true,
                     ValidateIssuer=true,
                     ValidateAudience=true,
-                   // ValidIssuer = Configuration["Tokens:Issuer"],
-                  //  ValidAudience = Configuration["Tokens:Issuer"],
+                    ValidIssuer = "",
+                    ValidAudience = "",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
 
                 };
@@ -103,19 +103,19 @@ namespace DapperWebAPI
             }
 
             app.UseHttpsRedirection();
- app.UseMiddleware<JwtMiddleware>();
+ 
             app.UseRouting();
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
-
+app.UseMiddleware<JwtMiddleware>();
             // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dapper Deneme V1");
             });
-
+app.UseAuthentication();
             app.UseAuthorization();
-            app.UseAuthentication();
+            
 
            
             app.UseEndpoints(endpoints =>

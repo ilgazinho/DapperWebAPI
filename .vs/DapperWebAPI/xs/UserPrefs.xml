@@ -1,20 +1,28 @@
 ﻿<Properties StartupConfiguration="{28F3E62B-FDB8-477F-B6A2-1B73CC62654F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DapperWebAPI/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DapperWebAPI/Controllers/StockController.cs">
     <Files>
       <File FileName="DapperWebAPI/Program.cs" Line="16" Column="1" />
-      <File FileName="DapperWebAPI/Startup.cs" Line="51" Column="33" />
-      <File FileName="DapperWebAPI/appsettings.json" />
+      <File FileName="DapperWebAPI/Startup.cs" Line="59" Column="70" />
+      <File FileName="DapperWebAPI/appsettings.json" Line="13" Column="9" />
       <File FileName="DapperWebAPI/Controllers/ProductsController.cs" />
       <File FileName="DapperWebAPI/Repository/ProductRepository.cs" />
+      <File FileName="DapperWebAPI/Controllers/UserController.cs" Line="1" Column="1" />
+      <File FileName="DapperWebAPI/Middlewares/GlobalExceptionMiddleware.cs" Line="1" Column="1" />
+      <File FileName="DapperWebAPI/Helper/JwtMiddleware.cs" Line="1" Column="1" />
+      <File FileName="DapperWebAPI/AuthOperationFilter.cs" Line="1" Column="1" />
+      <File FileName="DapperWebAPI/Controllers/StockController.cs" Line="12" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DapperWebAPI" expanded="True">
             <Node name="DapperWebAPI" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="StockController.cs" selected="True" />
+              </Node>
+              <Node name="Helper" expanded="True" />
+              <Node name="Middlewares" expanded="True" />
               <Node name="Repository" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +33,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.DapperWebAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/Startup.cs" relfile="DapperWebAPI/Startup.cs" line="60" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
