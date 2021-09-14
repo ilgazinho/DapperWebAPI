@@ -55,8 +55,8 @@ namespace DapperWebAPI
                     ValidateIssuerSigningKey = true,
                     ValidateIssuer=true,
                     ValidateAudience=true,
-                    ValidIssuer = "",
-                    ValidAudience = "",
+                    ValidIssuer = "Kendo",
+                    ValidAudience = "Kendo",
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
 
                 };
