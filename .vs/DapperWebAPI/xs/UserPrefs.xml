@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{28F3E62B-FDB8-477F-B6A2-1B73CC62654F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="DapperWebAPI/Startup.cs">
     <Files>
-      <File FileName="DapperWebAPI/Program.cs" Line="1" Column="1" />
-      <File FileName="DapperWebAPI/Startup.cs" Line="52" Column="43" />
-      <File FileName="DapperWebAPI/appsettings.json" Line="14" Column="5" />
+      <File FileName="DapperWebAPI/Program.cs" Line="16" Column="1" />
+      <File FileName="DapperWebAPI/Startup.cs" Line="51" Column="33" />
+      <File FileName="DapperWebAPI/appsettings.json" />
+      <File FileName="DapperWebAPI/Controllers/ProductsController.cs" />
+      <File FileName="DapperWebAPI/Repository/ProductRepository.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DapperWebAPI" expanded="True">
             <Node name="DapperWebAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Repository" expanded="True" />
               <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
