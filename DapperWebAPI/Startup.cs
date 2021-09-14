@@ -59,14 +59,27 @@ namespace DapperWebAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Dapper Deneme V1", Version = "v1" });
-           /*     c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "basic",
                     In = ParameterLocation.Header,
-                    Description = "Basic Authorization header."
-                });*/
+                    Description = "Please insert JWT with Bearer into field",
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                {
+                  new OpenApiSecurityScheme
+                  {
+                   Reference = new OpenApiReference
+                    {
+                     Type = ReferenceType.SecurityScheme,
+                     Id = "Bearer"
+                   }
+                  },
+                  Array.Empty<string>()
+                  }
+                });
                 //c.OperationFilter<AuthOperationFilter>();
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -83,7 +96,7 @@ namespace DapperWebAPI
             }
 
             app.UseHttpsRedirection();
-
+ app.UseMiddleware<JwtMiddleware>();
             app.UseRouting();
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
@@ -97,7 +110,7 @@ namespace DapperWebAPI
             app.UseAuthorization();
             app.UseAuthentication();
 
-            app.UseMiddleware<JwtMiddleware>();
+           
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
