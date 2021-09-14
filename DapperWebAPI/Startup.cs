@@ -20,6 +20,7 @@ using System.Reflection;
 using System.IO;
 using System.Text;
 using DapperWebAPI.Helper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace DapperWebAPI
 {
@@ -43,13 +44,19 @@ namespace DapperWebAPI
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddControllers();
             services.AddRouting();
-            services.AddAuthentication().AddJwtBearer(x =>
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(x =>
             {
                 x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["Tokens:Issuer"],
-                    ValidAudience = Configuration["Tokens:Issuer"],
+                    ValidateIssuer=true,
+                    ValidateAudience=true,
+                   // ValidIssuer = Configuration["Tokens:Issuer"],
+                  //  ValidAudience = Configuration["Tokens:Issuer"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Tokens:Key"]))
 
                 };
