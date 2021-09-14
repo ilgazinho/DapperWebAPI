@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ilgaz/Desktop/WebAPI/Denemelerim/DapperDeneme/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj": {}
+    "/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj": {}
   },
   "projects": {
-    "/Users/ilgaz/Desktop/WebAPI/Denemelerim/DapperDeneme/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj": {
+    "/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ilgaz/Desktop/WebAPI/Denemelerim/DapperDeneme/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj",
+        "projectUniqueName": "/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj",
         "projectName": "DapperWebAPI",
-        "projectPath": "/Users/ilgaz/Desktop/WebAPI/Denemelerim/DapperDeneme/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj",
+        "projectPath": "/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/DapperWebAPI.csproj",
         "packagesPath": "/Users/ilgaz/.nuget/packages/",
-        "outputPath": "/Users/ilgaz/Desktop/WebAPI/Denemelerim/DapperDeneme/DapperWebAPI/DapperWebAPI/obj/",
+        "outputPath": "/Users/ilgaz/Documents/GitHub/DapperWebAPI/DapperWebAPI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
