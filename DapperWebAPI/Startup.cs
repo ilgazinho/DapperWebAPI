@@ -107,17 +107,18 @@ namespace DapperWebAPI
             app.UseRouting();
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
-app.UseMiddleware<JwtMiddleware>();
+
             // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dapper Deneme V1");
             });
-app.UseAuthentication();
-            app.UseAuthorization();
-            
+            app.UseMiddleware<JwtMiddleware>();
+            app.UseAuthentication();
 
-           
+            app.UseAuthorization();
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
